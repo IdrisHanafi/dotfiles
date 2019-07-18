@@ -28,3 +28,9 @@ You will need the following things properly installed on your computer.
   ```
   $ cp -r .vimrc ~/
   ```
+4. Open up the file in vim and run the following commands:
+  
+  ```
+  :source %
+  :PlugInstall
+  ```
