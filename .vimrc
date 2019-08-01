@@ -12,6 +12,12 @@ autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 
+" easier splits in vsplit
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 imap \\ <C-c>
 nmap \\ <C-c>
 vmap \\ <C-c>
