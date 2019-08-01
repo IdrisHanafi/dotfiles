@@ -12,7 +12,11 @@ autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 
-" easier splits in vsplit
+" Uncomment this if you're using CMDER
+" CMDER for some odd reason disables backspace
+" set backspace=indent,eol,start
+
+" easier split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
