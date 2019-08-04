@@ -12,6 +12,10 @@ autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 
+" insert new line by pressing enter without getting into insert mode
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
 " Uncomment this if you're using CMDER
 " CMDER for some odd reason disables backspace
 " set backspace=indent,eol,start
