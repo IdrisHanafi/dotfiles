@@ -13,7 +13,7 @@ au BufReadPost *.hbs set syntax=html
 colorscheme desert
 
 " insert new line by pressing enter without getting into insert mode
-nmap <S-Enter> O<Esc>
+nmap O O<Esc>
 nmap <CR> o<Esc>
 
 " Uncomment this if you're using CMDER
