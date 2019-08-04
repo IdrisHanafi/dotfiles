@@ -58,6 +58,8 @@ vnoremap `` <C-c>:w<CR>
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'ctrlpvim/ctrlp.vim'
+
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
