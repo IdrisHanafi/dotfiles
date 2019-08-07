@@ -26,6 +26,8 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+imap jk <C-c>
+imap kj <C-c>
 imap \\ <C-c>
 nmap \\ <C-c>
 vmap \\ <C-c>
