@@ -1,5 +1,6 @@
 syntax on
 set hlsearch
+set incsearch
 set cursorline
 filetype indent plugin on
 set mouse=a
