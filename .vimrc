@@ -54,6 +54,8 @@ vnoremap `` <C-c>:w<CR>
 " nnoremap <C-s> :w<cr>
 
 " autocmd vimenter * NERDTree
+" NERDTree Shortcut
+nmap = :NERDTreeToggle<cr>
 
 " Place vim-plugs plugins below using the Plug 'function name'
 " Run :source %
