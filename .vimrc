@@ -49,6 +49,13 @@ nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 
 " nnoremap <C-s> :w<cr>
 
+" Open FZF and search
+nmap <Leader>ff :Files<cr>
+" Find a word in the directory
+nmap <Leader>rg :Rg<Space>
+" List commits
+nmap <Leader>cc :Commits<cr>
+
 " Open NERDTree with toggle
 nmap = :NERDTreeToggle<cr>
 " autocmd vimenter * NERDTree
@@ -63,8 +70,23 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
-
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+" Allow passing optional flags into the Rg command.
+"   Example: :Rg myterm -g '*.md'
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case " . <q-args>, 1, <bang>0)
+
+" add preview window to the Rg command
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+
+" Add preview to the :Files command
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']}, <bang>0)
 
 Plug 'jiangmiao/auto-pairs'
 " post install (yarn install | npm install)
