@@ -35,3 +35,11 @@ You will need the following things properly installed on your computer.
   :source %
   :PlugInstall
   ```
+5. Add the following to your .bashrc or .zshrc:
+
+   ```
+   # Enable a better reverse search experience.
+   #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
+   #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
+   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+   ```
