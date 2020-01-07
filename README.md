@@ -39,4 +39,4 @@ You will need the following things properly installed on your computer.
   
 ## Important Notes
 
-1. For tmux my prefix is not `C-b`, it is `C-a`.
+1. For tmux, my prefix is not `C-b`, it is `C-a`.
