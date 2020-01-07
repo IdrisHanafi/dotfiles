@@ -1,13 +1,14 @@
-# My vimrc cuz why not
+# My dotfiles
 
 ## Overview
 
-here just in case if you wanna copy my vimrc lol
+Backup, restore, and sync the prefs and settings for my toolbox. My dotfiles might be the most important files on my machine.
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
+* [tmux](https://github.com/tmux/tmux)
 * [vim](https://www.vim.org/)
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -17,17 +18,17 @@ You will need the following things properly installed on your computer.
 1. Clone this repository:
   
   ```
-  $ git clone https://github.com/IdrisHanafi/vimrc.git
+  $ git clone https://github.com/IdrisHanafi/dotfiles.git
   ```
 2. Change into the cloned directory:
   
   ```
-  $ cd vimrc
+  $ cd dotfiles
   ```
 3. Move it to your home directory:
   
   ```
-  $ cp -r .vimrc ~/
+  $ cp -r * ~/
   ```
 4. Open up the file in vim and run the following commands:
   
@@ -35,11 +36,3 @@ You will need the following things properly installed on your computer.
   :source %
   :PlugInstall
   ```
-5. Add the following to your .bashrc or .zshrc:
-
-   ```
-   # Enable a better reverse search experience.
-   #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
-   #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
-   export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
-   ```
