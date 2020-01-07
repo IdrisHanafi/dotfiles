@@ -2,7 +2,7 @@
 
 ## Overview
 
-Backup, restore, and sync the prefs and settings for my toolbox. My dotfiles might be the most important files on my machine.
+Backup, restore, and sync the prefs and settings for my toolbox.
 
 ## Prerequisites
 
@@ -36,3 +36,7 @@ You will need the following things properly installed on your computer.
   :source %
   :PlugInstall
   ```
+  
+## Important Notes
+
+1. For tmux my prefix is not `C-b`, it is `C-a`.
