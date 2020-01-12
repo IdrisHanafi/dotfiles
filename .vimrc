@@ -56,6 +56,9 @@ nmap <Leader>rg :Rg<Space>
 " List commits
 nmap <Leader>cc :Commits<cr>
 
+" Add colors to HEX in text
+nmap <Leader>co :ColorHighlight<cr>
+
 " Open NERDTree with toggle
 nmap = :NERDTreeToggle<cr>
 " autocmd vimenter * NERDTree
@@ -66,6 +69,7 @@ nmap = :NERDTreeToggle<cr>
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'chrisbra/colorizer'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
