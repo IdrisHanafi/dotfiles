@@ -19,3 +19,9 @@ alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@3.133.89.173"
 #   Requires: https://github.com/BurntSushi/ripgrep (for using rg below)
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Allows 256 Color for VIM and TMUX
+if [ "$TERM" = "xterm" ]; then
+  export TERM=xterm-256color
+fi
+alias tmux='tmux -2'  # for 256color
