@@ -13,6 +13,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@3.133.89.173"
+alias dev-tmux="tmux new-session \; split-window -v -p 25 \; split-window -h \;"
 
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
@@ -20,7 +21,6 @@ alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@3.133.89.173"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Allows 256 Color for VIM and TMUX
 if [ "$TERM" = "xterm" ]; then
   export TERM=xterm-256color
 fi
