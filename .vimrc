@@ -9,9 +9,10 @@ set relativenumber
 set tabstop=4
 set ic
 "set noet
-"set pastetoggle=<F2>
+set pastetoggle=<F2>
 set textwidth=80
 autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
+autocmd BufRead,BufNewFile *.zai setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 
@@ -117,3 +118,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 call plug#end()
+
+" ESLint configs
+let g:ale_fixers = {
+ \ 'javascript': ['eslint']
+ \ }
+
+let g:ale_fix_on_save = 1
