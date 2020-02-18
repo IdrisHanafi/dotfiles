@@ -16,6 +16,12 @@ autocmd BufRead,BufNewFile *.zai setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 
+" easy buffer navigations
+nnoremap <leader>bb :buffers<cr>:b<space> 
+nnoremap <leader><tab> :b#<cr>
+map <leader>] :bn<cr>
+map <leader>[ :bp<cr>
+
 " easier split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
