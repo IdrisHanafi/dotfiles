@@ -15,6 +15,8 @@ autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.zai setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
+" If it's too dark, try:
+" colorscheme murphy
 
 " easy buffer navigations
 nnoremap <leader>bb :buffers<cr>:b<space> 
