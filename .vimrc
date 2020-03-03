@@ -17,7 +17,7 @@ au BufReadPost *.hbs set syntax=html
 colorscheme desert
 " If it's too dark, try:
 " colorscheme murphy
-" disable the annoying Windows bell sound
+" disable the annoying Windows bell sound:
 " set visualbell
 
 " easy buffer navigations
