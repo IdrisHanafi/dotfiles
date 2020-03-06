@@ -16,7 +16,7 @@ autocmd BufRead,BufNewFile *.zai setlocal ts=2 sw=2 expandtab
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 " If it's too dark, try:
-" colorscheme murphy
+" colorscheme elflord
 " disable the annoying Windows bell sound:
 " set visualbell
 
