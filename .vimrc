@@ -17,7 +17,7 @@ au BufRead,BufNewFile *.ts set syntax=javascript
 au BufReadPost *.hbs set syntax=html
 colorscheme desert
 " If it's too dark, try:
-" colorscheme elflord
+" colorscheme darkblue
 " disable the annoying Windows bell sound:
 " set visualbell
 
