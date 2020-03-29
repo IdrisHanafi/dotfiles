@@ -33,6 +33,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" copy into mac clipboard
+vnoremap <leader>c :w !pbcopy<CR><CR> 
+
 inoremap jk <Esc>
 inoremap kj <Esc>
 " insert mode esc and save
