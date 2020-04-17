@@ -8,6 +8,7 @@ set number
 set relativenumber
 set tabstop=4
 set ic
+set backspace=indent,eol,start
 "set noet
 set pastetoggle=<F2>
 set textwidth=80
