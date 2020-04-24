@@ -12,7 +12,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@3.133.89.173"
+alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@52.15.53.77"
 alias dev-tmux="tmux new-session \; split-window -v -p 25 \; split-window -h \;"
 
 # Enable a better reverse search experience.
