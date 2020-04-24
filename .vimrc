@@ -128,6 +128,9 @@ Plug 'honza/vim-snippets'
 " React Plugin
 Plug 'tellijo/vim-react-native-snippets'
 
+" nginx styling
+Plug 'chr4/nginx.vim'
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
