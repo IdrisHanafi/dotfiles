@@ -82,7 +82,11 @@ nmap = :NERDTreeToggle<cr>
 " Place vim-plugs plugins below using the Plug 'function name'
 " Run :source %
 " Then Run :PlugInstall
-
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'chrisbra/colorizer'
