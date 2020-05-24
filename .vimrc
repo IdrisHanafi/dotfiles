@@ -16,7 +16,7 @@ autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.zai setlocal ts=2 sw=2 expandtab
 au BufRead,BufNewFile *.ts set syntax=javascript
 au BufReadPost *.hbs set syntax=html
-colorscheme desert
+" colorscheme desert
 " If it's too dark, try:
 " colorscheme darkblue
 " disable the annoying Windows bell sound:
@@ -46,24 +46,18 @@ nnoremap `` <C-c>:w<CR>
 " visual mode esc and save
 vnoremap `` <C-c>:w<CR>
 
+" resize vertical splits
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>- :vertical resize -5<CR>
+
+" J and K on a visual block moves things up and down
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " Force replace, example /word_to_replace \r
 nnoremap <Leader>r :%s///g<Left><Left>
 " Replace with confirm, example /word_to_replace \rc
 nnoremap <Leader>rc :%s///gc<Left><Left><Left>
-
-" normal mode: save
-" nnoremap <c-s> :w<CR> 
-" insert mode: escape to normal and save
-" inoremap <c-s> <Esc>:w<CR> 
-" visual mode: escape to normal and save
-" vnoremap <c-s> <Esc>:w<CR>  
-
-" stty -ixon
-" noremap <silent> <C-S>          :update<CR>
-" vnoremap <silent> <C-S>         <C-C>:update<CR>
-" inoremap <silent> <C-S>         <C-O>:update<CR>
-
-" nnoremap <C-s> :w<cr>
 
 " Open FZF and search
 nmap <Leader>ff :Files<cr>
@@ -89,12 +83,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
+" Automatically install missing plugins on startup
+if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
+  autocmd VimEnter * PlugInstall | q
+endif
+
+Plug 'morhetz/gruvbox'
 Plug 'chrisbra/colorizer'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -131,6 +130,15 @@ Plug 'tellijo/vim-react-native-snippets'
 " nginx styling
 Plug 'chr4/nginx.vim'
 
+call plug#end()
+
+" Best colorscheme ever
+colorscheme gruvbox
+set background=dark
+
+" ignore certain files in ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -138,8 +146,6 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
-
-call plug#end()
 
 " ESLint configs
 let g:ale_fixers = {
