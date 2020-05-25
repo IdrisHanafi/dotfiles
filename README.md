@@ -9,7 +9,7 @@ Backup, restore, and sync the prefs and settings for my toolbox.
 You will need the following things properly installed on your computer.
 
 * [tmux](https://github.com/tmux/tmux)
-* [vim](https://www.vim.org/)
+* [vim (min version 8.2)](https://www.vim.org/)
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
