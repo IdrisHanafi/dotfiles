@@ -61,10 +61,11 @@ nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 
 " Open FZF and search
 nmap <Leader>ff :Files<cr>
+nmap <Leader>gf :GFiles<cr>
 " Find a word in the directory
 nmap <Leader>rg :Rg<Space>
 " List commits
-nmap <Leader>cc :Commits<cr>
+nmap <Leader>c :Commits<cr>
 
 " Add colors to HEX in text
 nmap <Leader>co :ColorHighlight<cr>
@@ -121,6 +122,9 @@ Plug 'scrooloose/nerdtree'
 " Track the engine. Autocomplete
 Plug 'SirVer/ultisnips'
 
+" autocomplete stuffs
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
@@ -135,6 +139,13 @@ call plug#end()
 " Best colorscheme ever
 colorscheme gruvbox
 set background=dark
+
+" GoTo code navigation.
+nmap <buffer> <Leader>gd <Plug>(coc-definition)
+" nmap <buffer> <Leader>gr <Plug>(coc-references)
+" For  some odd reason the above doesn't 
+" work in regular vim but the below one does
+nnoremap <silent><leader>gr :call CocAction('jumpReferences')<cr>
 
 " ignore certain files in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
