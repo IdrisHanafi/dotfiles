@@ -7,6 +7,7 @@ set mouse=a
 set number
 set relativenumber
 set tabstop=4
+set expandtab
 set ic
 set backspace=indent,eol,start
 "set noet
