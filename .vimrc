@@ -23,6 +23,9 @@ au BufReadPost *.hbs set syntax=html
 " disable the annoying Windows bell sound:
 " set visualbell
 
+" show filename
+set laststatus=2
+
 " easy buffer navigations
 nnoremap <leader>bb :buffers<cr>:b<space> 
 nnoremap <leader><tab> :b#<cr>
