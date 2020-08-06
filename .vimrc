@@ -28,7 +28,9 @@ au BufReadPost *.hbs set syntax=html
 set laststatus=2
 
 " easy buffer navigations
-nnoremap <leader>bb :buffers<cr>:b<space> 
+nnoremap <leader>b :buffers<cr>:b<space>
+nnoremap <leader>vb :buffers<cr>:vert sb<space>
+nnoremap <leader>sb :buffers<cr>:sb<space>
 nnoremap <leader><tab> :b#<cr>
 map <leader>] :bn<cr>
 map <leader>[ :bp<cr>
