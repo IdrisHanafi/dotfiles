@@ -14,6 +14,7 @@ set backspace=indent,eol,start
 set pastetoggle=<F2>
 set textwidth=80
 set colorcolumn=80
+autocmd BufRead,BufNewFile *.html setlocal ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.css setlocal ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab
 autocmd BufRead,BufNewFile *.ts setlocal ts=2 sw=2 expandtab
