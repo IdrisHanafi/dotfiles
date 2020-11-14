@@ -40,3 +40,13 @@ You will need the following things properly installed on your computer.
 ## Important Notes
 
 1. For tmux, my prefix is both `C-b` or `C-a`.
+
+## Essentials
+
+* [homebrew](https://brew.sh/)
+* [git](https://git-scm.com/download/mac)
+* [Java 8-11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+* [Node (npm comes along)](https://nodejs.org/en/download/)
+* GCC
+* [python 3, PIP, IPython](https://docs.python-guide.org/starting/install3/osx/)
+
