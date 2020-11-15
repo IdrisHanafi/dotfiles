@@ -1,19 +1,19 @@
-#stty -ixon
-
 export CLICOLOR=1
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export PATH=$PATH:/usr/local/mysql/bin/
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export ZSH="/Users/idris/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
 
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
 alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@idrishanafi.info"
 alias dev-tmux="tmux new-session \; split-window -v -p 25 \; split-window -h \;"
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
 
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)

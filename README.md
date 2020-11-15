@@ -3,13 +3,14 @@
 ## Overview
 
 Backup, restore, and sync the prefs and settings for my toolbox.
+Update: On this very day, 11/13/2020, I have converted to `nvim`!
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
 * [tmux](https://github.com/tmux/tmux)
-* [vim (min version 8.2 and make sure it's with python3)](https://www.vim.org/)
+* [nvim (make sure it's with python3)](https://neovim.io/)
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 
