@@ -25,3 +25,5 @@ if [ "$TERM" = "xterm" ]; then
   export TERM=xterm-256color
 fi
 alias tmux='tmux -2'  # for 256color
+
+set -o vi
