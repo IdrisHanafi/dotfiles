@@ -2,7 +2,7 @@ export CLICOLOR=1
 export ZSH="/Users/idris/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
