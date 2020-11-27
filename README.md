@@ -14,6 +14,7 @@ You will need the following things properly installed on your computer.
 * [nvim (make sure it's with python3)](https://neovim.io/)
 * [vim-plug](https://github.com/junegunn/vim-plug)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 
 ## Installation
 
@@ -51,4 +52,5 @@ You will need the following things properly installed on your computer.
 * [Node (npm comes along)](https://nodejs.org/en/download/)
 * GCC
 * [python 3, PIP, IPython](https://docs.python-guide.org/starting/install3/osx/)
+* [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
 

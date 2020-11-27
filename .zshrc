@@ -1,4 +1,5 @@
 export CLICOLOR=1
+export EDITOR="vim"
 export ZSH="/Users/idris/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
@@ -14,6 +15,10 @@ alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
+
+# tmuxinator alias
+alias mads="tmuxinator start mads"
+alias zai="tmuxinator start zai"
 
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
