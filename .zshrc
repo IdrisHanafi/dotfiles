@@ -5,6 +5,13 @@ ZSH_THEME="robbyrussell"
 
 plugins=(git vi-mode)
 
+# Android React Native
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -19,6 +26,7 @@ alias vimdiff="nvim -d"
 # tmuxinator alias
 alias mads="tmuxinator start mads"
 alias zai="tmuxinator start zai"
+alias zaiw="tmuxinator start zai-web"
 
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
@@ -32,3 +40,4 @@ fi
 alias tmux='tmux -2'  # for 256color
 
 set -o vi
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
