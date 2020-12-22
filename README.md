@@ -5,6 +5,7 @@
 Backup, restore, and sync the prefs and settings for my toolbox.
 
 **Update**: On this very day, 11/13/2020, I have converted to `nvim`!
+**Update**: On this very day, 12/22/2020, `nvim` is slow af. Going back to regular `vim`.
 
 ## Prerequisites
 
