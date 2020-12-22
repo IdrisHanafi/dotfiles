@@ -19,7 +19,7 @@ alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@idrishanafi.info"
 alias dev-tmux="tmux new-session \; split-window -v -p 25 \; split-window -h \;"
 alias v="nvim"
 alias vi="nvim"
-alias vim="nvim"
+#alias vim="nvim"
 alias view="nvim -R"
 alias vimdiff="nvim -d"
 
