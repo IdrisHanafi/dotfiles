@@ -151,11 +151,11 @@ colorscheme gruvbox
 set background=dark
 
 " GoTo code navigation.
-nmap <buffer> <Leader>gd <Plug>(coc-definition)
-" nmap <buffer> <Leader>gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+"nmap <buffer> gr <Plug>(coc-references)
 " For  some odd reason the above doesn't 
 " work in regular vim but the below one does
-nnoremap <silent><leader>gr :call CocAction('jumpReferences')<cr>
+nnoremap <silent> gr :call CocAction('jumpReferences')<cr>
 
 " ignore certain files in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
