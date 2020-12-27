@@ -3,7 +3,7 @@ export EDITOR="vim"
 export ZSH="/Users/idris/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 
-plugins=(git vi-mode)
+# plugins=(git vi-mode)
 
 # Android React Native
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -39,5 +39,6 @@ if [ "$TERM" = "xterm" ]; then
 fi
 alias tmux='tmux -2'  # for 256color
 
-set -o vi
+# vim bindings
+bindkey -v
 export PATH="/usr/local/opt/python@3.8/bin:$PATH"
