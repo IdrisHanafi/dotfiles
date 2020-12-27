@@ -5,3 +5,6 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Vim bindings
+set -o vi
