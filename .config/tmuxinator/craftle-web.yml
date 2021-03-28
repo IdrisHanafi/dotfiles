@@ -1,7 +1,7 @@
-# /Users/idris/.config/tmuxinator/zai-web.yml
+# /Users/idris/.config/tmuxinator/craftle-web.yml
 
-name: zai-web
-root: ~/Dev/zai-web/
+name: craftle-web
+root: ~/Dev/craftle-web/
 
 # Optional tmux socket
 # socket_name: foo
@@ -60,7 +60,7 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - source setup.sh && cd backend/zai_backend/ && vim
-        - source setup.sh && cd backend/zai_backend && python manage.py runserver
+        - source setup.sh && cd backend/craftle_backend/ && vim
+        - source setup.sh && cd backend/craftle_backend && python manage.py runserver
         - source setup.sh && ls -l
   - logs: ls -l

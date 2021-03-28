@@ -28,8 +28,8 @@ alias vimdiff="nvim -d"
 
 # tmuxinator alias
 alias mads="tmuxinator start mads"
-alias zai="tmuxinator start zai"
-alias zaiw="tmuxinator start zai-web"
+alias craftle="tmuxinator start craftle"
+alias craftlew="tmuxinator start craftle-web"
 
 # Enable a better reverse search experience.
 #   Requires: https://github.com/junegunn/fzf (to use fzf in general)
@@ -42,7 +42,6 @@ if [ "$TERM" = "xterm" ]; then
 fi
 alias tmux='tmux -2'  # for 256color
 
-# vim key bindings
 bindkey -v
 bindkey '^r' history-incremental-search-backward
 

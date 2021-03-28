@@ -1,7 +1,7 @@
 # /Users/idris/.config/tmuxinator/test.yml
 
-name: zai
-root: ~/Dev/Zai/
+name: craftle
+root: ~/Dev/Craftle/
 
 # Optional tmux socket
 # socket_name: foo
