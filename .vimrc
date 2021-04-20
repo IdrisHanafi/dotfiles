@@ -158,6 +158,19 @@ nmap <silent> gd <Plug>(coc-definition)
 " work in regular vim but the below one does
 nnoremap <silent> gr :call CocAction('jumpReferences')<cr>
 
+" Use <Tab> and <S-Tab> to navigate the completion list:
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
 " ignore certain files in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
