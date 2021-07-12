@@ -57,3 +57,10 @@ You will need the following things properly installed on your computer.
 * [python 3, PIP, IPython](https://docs.python-guide.org/starting/install3/osx/)
 * [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
 
+Some good CoC stuffs for VIM:
+
+```
+:CocInstall coc-tsserver
+:CocInstall coc-python
+```
+

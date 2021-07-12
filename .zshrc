@@ -20,11 +20,11 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 alias idris="ssh -i /Users/idris/.ssh/Idris-Server.pem ubuntu@idrishanafi.info"
 alias dev-tmux="tmux new-session \; split-window -v -p 25 \; split-window -h \;"
-alias v="nvim"
-alias vi="nvim"
+alias v="vim"
+alias vi="vim"
 #alias vim="nvim"
-alias view="nvim -R"
-alias vimdiff="nvim -d"
+alias view="vim -R"
+alias vimdiff="vim -d"
 
 # tmuxinator alias
 alias mads="tmuxinator start mads"
@@ -45,7 +45,7 @@ alias tmux='tmux -2'  # for 256color
 bindkey -v
 bindkey '^r' history-incremental-search-backward
 
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+# export PATH="/usr/local/opt/python@3.8/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # AMZN alias lol
