@@ -26,7 +26,7 @@ au BufReadPost *.hbs set syntax=html
 " If it's too dark, try:
 " colorscheme darkblue
 " disable the annoying Windows bell sound:
-" set visualbell
+set visualbell
 
 " show filename
 set laststatus=2
@@ -158,18 +158,26 @@ nmap <silent> gd <Plug>(coc-definition)
 " work in regular vim but the below one does
 nnoremap <silent> gr :call CocAction('jumpReferences')<cr>
 
-" Use <Tab> and <S-Tab> to navigate the completion list:
-" use <tab> for trigger completion and navigate to the next complete item
-function! s:check_back_space() abort
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" NOTE: There's always complete item selected by default, you may want to enable
+" no select by `"suggest.noselect": true` in your configuration file.
+" other plugin before putting this into your config.
+inoremap <silent><expr> <C-j>
+      \ coc#pum#visible() ? coc#pum#next(1):
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice.
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+function! CheckBackspace() abort
   let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Use <cr> to confirm completion
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " ignore certain files in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
