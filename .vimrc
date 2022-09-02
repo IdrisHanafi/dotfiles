@@ -83,7 +83,7 @@ nmap <Leader>co :ColorHighlight<cr>
 
 " Open NERDTree with toggle
 nmap = :NERDTreeToggle<cr>
-" autocmd vimenter * NERDTree
+nnoremap <C-f> :NERDTreeFind<CR>
 
 " Place vim-plugs plugins below using the Plug 'function name'
 " Run :source %
@@ -128,16 +128,16 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "Plug 'vim-scripts/AutoComplPop'
 " File Directory
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 
 " Track the engine. Autocomplete
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 " autocomplete stuffs
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Snippets are separated from the engine. Add this if you want them:
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " React Plugin
 Plug 'tellijo/vim-react-native-snippets'
@@ -150,6 +150,10 @@ call plug#end()
 " Best colorscheme ever
 colorscheme gruvbox
 set background=dark
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -167,12 +171,17 @@ inoremap <silent><expr> <C-j>
       \ coc#pum#visible() ? coc#pum#next(1):
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+inoremap <expr><C-k> 
+      \ coc#pum#visible() ? coc#pum#prev(1): "\<C-h>"
 
 " Make <CR> to accept selected completion item or notify coc.nvim to format
 " <C-g>u breaks current undo, please make your own choice.
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -181,14 +190,6 @@ endfunction
 
 " ignore certain files in ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
 
 " ESLint configs
 let g:ale_fixers = {
