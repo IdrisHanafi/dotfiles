@@ -81,8 +81,10 @@ nmap <Leader>c :Commits<cr>
 " Add colors to HEX in text
 nmap <Leader>co :ColorHighlight<cr>
 
-" Open NERDTree with toggle
-nmap = :NERDTreeToggle<cr>
+" Open NERDTree with toggle.
+" NOTE: weird bug in NERDTree where it doesn't
+" minimize the cmdheight automatically
+nmap = :NERDTreeToggle<cr>:set cmdheight=2<cr>:set cmdheight=1<cr>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 " Place vim-plugs plugins below using the Plug 'function name'
@@ -124,26 +126,17 @@ command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']}, <bang>0)
 
 Plug 'jiangmiao/auto-pairs'
-" post install (yarn install | npm install)
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-"Plug 'vim-scripts/AutoComplPop'
 " File Directory
 Plug 'preservim/nerdtree'
-
-" Track the engine. Autocomplete
-" Plug 'SirVer/ultisnips'
 
 " autocomplete stuffs
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Snippets are separated from the engine. Add this if you want them:
-" Plug 'honza/vim-snippets'
-
-" React Plugin
-Plug 'tellijo/vim-react-native-snippets'
-
 " nginx styling
 Plug 'chr4/nginx.vim'
+
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
