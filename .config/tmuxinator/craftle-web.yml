@@ -45,15 +45,6 @@ root: ~/Dev/craftle-web/
 # attach: false
 
 windows:
-  - frontend:
-      layout: main-horizontal
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
-      panes:
-        - source setup.sh && cd frontend && vim
-        - source setup.sh && cd frontend && npm start
-        - source setup.sh && ls -l
   - backend:
       layout: main-horizontal
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
@@ -61,6 +52,15 @@ windows:
       # synchronize: after
       panes:
         - source setup.sh && cd backend/craftle_backend/ && vim
-        - source setup.sh && cd backend/craftle_backend && python manage.py runserver
+        - source setup.sh && cd backend/craftle_backend/ && python manage.py runserver
         - source setup.sh && ls -l
+  - frontend:
+      layout: main-horizontal
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - cd ~/Dev/craftle-widget && vim
+        - cd ~/Dev/craftle-widget && ls -l
+        - cd ~/Dev/craftle-widget && ls -l
   - logs: ls -l

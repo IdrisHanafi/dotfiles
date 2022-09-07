@@ -27,7 +27,6 @@ alias view="vim -R"
 alias vimdiff="vim -d"
 
 # tmuxinator alias
-alias mads="tmuxinator start mads"
 alias craftle="tmuxinator start craftle"
 alias craftlew="tmuxinator start craftle-web"
 
