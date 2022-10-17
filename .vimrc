@@ -31,6 +31,9 @@ set visualbell
 " show filename
 set laststatus=2
 
+" Leader Keys
+let maplocalleader = "\\"
+
 " easy buffer navigations
 nnoremap <leader>b :buffers<cr>:b<space>
 nnoremap <leader>vb :buffers<cr>:vert sb<space>
@@ -138,6 +141,11 @@ Plug 'chr4/nginx.vim'
 
 Plug 'vim-airline/vim-airline'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'tpope/vim-speeddating'
+Plug 'jceb/vim-orgmode'
+
 call plug#end()
 
 " Best colorscheme ever
@@ -190,3 +198,4 @@ let g:ale_fixers = {
  \ }
 
 let g:ale_fix_on_save = 1
+let g:org_export_emacs="/usr/local/bin/emacs"
