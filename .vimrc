@@ -1,11 +1,12 @@
 syntax on
+set re=0
 set hlsearch
 set incsearch
 set cursorline
 filetype indent plugin on
 set mouse=a
 set number
-set relativenumber
+"set relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -32,9 +33,6 @@ set visualbell
 " show filename
 set laststatus=2
 
-" Leader Keys
-let maplocalleader = "\\"
-
 " easy buffer navigations
 nnoremap <leader>b :buffers<cr>:b<space>
 nnoremap <leader>vb :buffers<cr>:vert sb<space>
@@ -55,11 +53,11 @@ vnoremap <leader>c :w !pbcopy<CR><CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 " insert mode esc and save
-imap `` <C-c>:w<CR>
+imap <Leader><Leader> <C-c>:w<CR>
 " normal mode esc and save
-nnoremap `` <C-c>:w<CR> 
+nnoremap <Leader><Leader> <C-c>:w<CR>
 " visual mode esc and save
-vnoremap `` <C-c>:w<CR>
+vnoremap <Leader><Leader> <C-c>:w<CR>
 
 " resize vertical splits
 nnoremap <silent> <Leader>+ :vertical resize +5<CR>
@@ -79,6 +77,8 @@ nmap <Leader>ff :Files<cr>
 nmap <Leader>gf :GFiles<cr>
 " Find a word in the directory
 nmap <Leader>rg :Rg<Space>
+" Find a word in the directory using value from buffer
+nmap <Leader>rgb :Rg<Space><C-r>"<cr>
 " List commits
 nmap <Leader>c :Commits<cr>
 
@@ -142,11 +142,19 @@ Plug 'chr4/nginx.vim'
 
 Plug 'vim-airline/vim-airline'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Terraform
+Plug 'hashivim/vim-terraform'
 
-Plug 'tpope/vim-speeddating'
-Plug 'jceb/vim-orgmode'
+Plug 'junegunn/vim-easy-align'
 
+" PlantUML
+Plug 'scrooloose/vim-slumlord'
+Plug 'weirongxu/plantuml-previewer.vim'
+Plug 'tyru/open-browser.vim'
+Plug 'aklt/plantuml-syntax'
+
+"LaTeX
+Plug 'lervag/vimtex'
 call plug#end()
 
 " Best colorscheme ever
@@ -195,8 +203,17 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " ESLint configs
 let g:ale_fixers = {
- \ 'javascript': ['eslint']
+ \ 'javascript': ['eslint'],
+ \ 'typescript': ['prettier', 'eslint']
  \ }
 
 let g:ale_fix_on_save = 1
-let g:org_export_emacs="/usr/local/bin/emacs"
+
+" Easy Align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" LaTeX Settings
+let g:vimtex_view_method = 'skim'

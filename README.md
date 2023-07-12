@@ -56,6 +56,7 @@ You will need the following things properly installed on your computer.
 * GCC
 * [python 3, PIP, IPython](https://docs.python-guide.org/starting/install3/osx/)
 * [Cocoapods](https://guides.cocoapods.org/using/getting-started.html)
+* [Skim PDF Reader (for LaTeX)](https://skim-app.sourceforge.io/)
 
 Some good CoC stuffs for VIM:
 
