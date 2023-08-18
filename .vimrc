@@ -207,6 +207,7 @@ let g:ale_fixers = {
  \ 'typescript': ['prettier', 'eslint']
  \ }
 
+let g:coc_disable_transparent_cursor = 1
 let g:ale_fix_on_save = 1
 
 " Easy Align
