@@ -49,10 +49,10 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " copy into mac clipboard
-vnoremap <leader>c :w !pbcopy<CR><CR> 
+vnoremap <leader>c "*y
 
-inoremap jk <Esc>
-inoremap kj <Esc>
+" inoremap jk <Esc>
+" inoremap kj <Esc>
 " insert mode esc and save
 imap <Leader><Leader> <C-c>:w<CR>
 " normal mode esc and save
@@ -156,6 +156,12 @@ Plug 'aklt/plantuml-syntax'
 
 "LaTeX
 Plug 'lervag/vimtex'
+
+"Elixir
+Plug 'elixir-editors/vim-elixir'
+
+"Copilot
+Plug 'github/copilot.vim'
 call plug#end()
 
 " Best colorscheme ever
