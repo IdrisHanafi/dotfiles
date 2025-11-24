@@ -21,6 +21,7 @@ autocmd BufRead,BufNewFile *.html setlocal ts=2 sw=2 expandtab textwidth=120 col
 autocmd BufRead,BufNewFile *.css setlocal ts=2 sw=2 expandtab textwidth=120 colorcolumn=120
 autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 expandtab textwidth=120 colorcolumn=120
 autocmd BufRead,BufNewFile *.jsx setlocal ts=2 sw=2 expandtab textwidth=120 colorcolumn=120
+autocmd BufRead,BufNewFile *.json setlocal ts=2 sw=2 expandtab textwidth=120 colorcolumn=120
 autocmd BufRead,BufNewFile *.ts setlocal ts=2 sw=2 expandtab textwidth=120 colorcolumn=120
 autocmd BufRead,BufNewFile *.tsx setlocal ts=2 sw=2 expandtab textwidth=120 colorcolumn=120
 au BufRead,BufNewFile *.ts set syntax=javascript
